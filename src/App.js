@@ -10,10 +10,13 @@ function App() {
 
   return (
     <div>
-      <button style={{backgroundColor: currentColor}}
-      onClick={() => setCurrentColor(newButtonColor)}>
+      <button
+        style={{backgroundColor: currentColor}}
+        onClick={() => setCurrentColor(newButtonColor)}
+      >
         Change to {newButtonColor}
       </button>
+      <input type="checkbox"/>
     </div>
   );
 }

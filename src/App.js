@@ -4,6 +4,10 @@ import { useState } from 'react';
 const BLUE = 'blue';
 const RED = 'red';
 
+export function replaceCamelWithSpaces(colorName) {
+  return colorName.replace(/\B([A-Z])\B/g, ' $1')
+}
+
 function App() {
   const [currentColor, setCurrentColor] = useState(RED)
   const [disabled, setDisabled] = useState(false)

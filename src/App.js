@@ -6,12 +6,13 @@ const RED = 'red';
 
 function App() {
   const [currentColor, setCurrentColor] = useState(RED)
+  const newButtonColor = currentColor === BLUE ? RED : BLUE
 
   return (
     <div>
       <button style={{backgroundColor: currentColor}}
-      onClick={() => setCurrentColor(currentColor === BLUE ? RED : BLUE)}>
-        Change to {currentColor === BLUE ? RED : BLUE}
+      onClick={() => setCurrentColor(newButtonColor)}>
+        Change to {newButtonColor}
       </button>
     </div>
   );

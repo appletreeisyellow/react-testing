@@ -1,7 +1,7 @@
 {
   "plugins": [
-    "jest-dom",
-    "testing-library"
+    "testing-library",
+    "jest-dom"
   ],
   "extends": [
     "react-app",

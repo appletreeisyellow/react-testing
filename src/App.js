@@ -1,23 +1,24 @@
-import './App.css';
-import { useState } from 'react';
+import "./App.css";
+import { useState } from "react";
 
-const MediumVioletRed = 'MediumVioletRed';
-const MidnightBlue = 'MidnightBlue';
+const MediumVioletRed = "MediumVioletRed";
+const MidnightBlue = "MidnightBlue";
 
 export function replaceCamelWithSpaces(colorName) {
-  return colorName.replace(/\B([A-Z])\B/g, ' $1')
+  return colorName.replace(/\B([A-Z])\B/g, " $1");
 }
 
 function App() {
-  const [currentColor, setCurrentColor] = useState(MediumVioletRed)
-  const [disabled, setDisabled] = useState(false)
-  const newButtonColor = currentColor === MidnightBlue ? MediumVioletRed : MidnightBlue
-  const newButtonColorName = replaceCamelWithSpaces(newButtonColor)
+  const [currentColor, setCurrentColor] = useState(MediumVioletRed);
+  const [disabled, setDisabled] = useState(false);
+  const newButtonColor =
+    currentColor === MidnightBlue ? MediumVioletRed : MidnightBlue;
+  const newButtonColorName = replaceCamelWithSpaces(newButtonColor);
 
   return (
     <div>
       <button
-        style={{backgroundColor: disabled ? 'gray' : currentColor}}
+        style={{ backgroundColor: disabled ? "gray" : currentColor }}
         onClick={() => setCurrentColor(newButtonColor)}
         disabled={disabled}
       >
